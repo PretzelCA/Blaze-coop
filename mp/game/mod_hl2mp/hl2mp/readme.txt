@@ -1,0 +1,1 @@
+This folder contains content from Half-Life 2 and HL2DM that's mounted by SecobMod.

@@ -1,0 +1,75 @@
+// Choreo version 1
+actor "odell"
+{
+  channel "look player"
+  {
+    event lookat "lookplayer"
+    {
+      time 0.153333 9.546666
+      param "!player"
+    }
+  }
+  channel "wav"
+  {
+    event speak "Borealis.stare"
+    {
+      time 1.180000 2.052199
+      param "Borealis.stare"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "flex"
+  {
+    event flexanimation "flex"
+    {
+      time 0.153333 10.573334
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "lowerer" combo 
+        {
+          0.0580 0.0100
+          0.7680 0.8200
+          2.1440 0.9600
+          3.3240 0.9600
+          4.7940 0.8900
+          5.9280 0.7900
+          9.3720 0.8200
+          9.9880 0.7900
+          10.3880 0.0300
+        }
+        {
+        }
+        "cheek_raiser" combo 
+        {
+          0.2360 0.2600
+          0.9040 0.6100
+          1.8200 0.6600
+          2.9240 0.6400
+          4.0800 0.6200
+          4.7900 0.6200
+          5.1060 0.6400
+          5.8780 0.6000
+          9.3860 0.4300
+          9.9740 0.3800
+        }
+        {
+        }
+      }
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "RampTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

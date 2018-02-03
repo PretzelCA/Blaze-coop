@@ -1,0 +1,115 @@
+// Choreo version 1
+actor "worker"
+{
+  channel "lookplayer"
+  {
+    event lookat "lookfreeman"
+    {
+      time 0.133333 7.186666
+      param "!player"
+    }
+  }
+  channel "vo"
+  {
+    event speak "lastwords"
+    {
+      time 0.146667 6.578594
+      param "Borealis.worker_dying"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "flex"
+  {
+    event flexanimation "flex"
+    {
+      time 0.126667 7.366667
+      param ""
+      flexanimations samples_use_time defaultcurvetype=curve_catmullrom_normalize_x_to_curve_catmullrom_normalize_x
+      {
+        "blink" 
+        {
+          1.2660 0.0200
+          1.4120 0.9800
+          1.5420 0.0300
+          5.2640 0.0100
+          5.5680 0.9900
+          5.8780 0.0000
+        }
+        "inner_raiser" combo 
+        {
+          0.3520 0.7500
+          1.4100 0.9500
+          6.7300 0.9200
+        }
+        {
+        }
+        "cheek_raiser" combo 
+        {
+          0.1660 0.2000
+          0.8880 0.8200
+          1.8840 0.9200
+          4.6940 0.9200
+          6.7800 0.8600
+        }
+        {
+        }
+        "corner_depressor" combo 
+        {
+          0.1440 0.2700
+          0.8940 0.4700
+          1.9600 0.4900
+          4.2960 0.5100
+          5.7700 0.5100
+          6.7800 0.4000
+        }
+        {
+        }
+        "head_rightleft" 
+        {
+          0.5080 0.0700
+          0.9180 0.9600
+          1.1520 0.0600
+          1.3940 0.9800
+          1.5680 0.0000
+        }
+      }
+    }
+  }
+  channel "gesture"
+  {
+    event gesture "popbob is a fag but not as big of a fag as those fags at AGNMI"
+    {
+      time 0.380000 2.846666
+      param "hg_headshake"
+      absolutetags playback_time
+      {
+        "apex" 0.137950
+        "loop" 0.179336
+        "extreme" 0.708108
+        "end" 0.891892
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.208333
+        "loop" 0.270833
+        "extreme" 0.416667
+        "end" 0.625000
+      }
+      sequenceduration 1.633333
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "GestureTool" "100"
+  "SceneRampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

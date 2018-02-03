@@ -1,0 +1,64 @@
+// Choreo version 1
+actor "odell"
+{
+  channel "look at"
+  {
+    event lookat "player"
+    {
+      time 0.046666 2.979999
+      param "Player"
+      event_ramp
+      {
+        0.4400 0.8700
+        1.1587 0.8700
+        1.8773 0.8700
+      }
+    }
+  }
+  channel "audio"
+  {
+    event speak "warmer"
+    {
+      time 0.260000 2.692472
+      param "Borealis.Odell_01"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "flex"
+  {
+    event gesture "nodleft"
+    {
+      time 1.846666 3.146666
+      param "hg_nod_left"
+      absolutetags playback_time
+      {
+        "apex" 0.236842
+        "extreme" 0.473684
+        "loop" 0.568947
+        "end" 0.578947
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.236842
+        "extreme" 0.473684
+        "loop" 0.578947
+        "end" 0.578947
+      }
+      sequenceduration 1.300000
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "SceneRampTool" "100"
+  "ExpressionTool" "100"
+  "RampTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

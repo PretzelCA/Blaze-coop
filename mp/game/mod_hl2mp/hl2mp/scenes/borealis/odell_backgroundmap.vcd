@@ -1,0 +1,25 @@
+// Choreo version 1
+actor "odell"
+{
+  channel "look"
+  {
+    event lookat "Look at dropship"
+    {
+      time 0.052778 13.388889
+      param "dropship"
+    }
+  }
+  active "0"
+}
+
+scalesettings
+{
+  "CChoreoView" "240"
+  "ExpressionTool" "100"
+  "SceneRampTool" "100"
+  "RampTool" "100"
+  "GestureTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off

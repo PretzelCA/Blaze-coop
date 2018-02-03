@@ -35,7 +35,7 @@
 #define SecobMod__USE_PLAYERCLASSES //Enable player classes.
 #define SecobMod__MULTIPLAYER_VIEWCONTROL_CAMERAS //Fixes the View Control Cameras so that all clients are affected by View Control cameras.
 //#define SecobMod__FORCE_TEAMPLAY_AS_ALWAYS_ON //Forces teamplay to always be enabled.
-#define SecobMod__ENABLE_FAKE_PASSENGER_SEATS //Allows a hacky passenger seat to be added to valves vehicles (jeep and jalopy).
+//#define SecobMod__ENABLE_FAKE_PASSENGER_SEATS //Allows a hacky passenger seat to be added to valves vehicles (jeep and jalopy).
 
 /**********************/
 /* Game Enhancements. */
@@ -43,7 +43,7 @@
 #define SecobMod__STRIDERS_ALWAYS_STOMP_IMPALE_PLAYERS //Force striders to always impale players with their legs.
 #define SecobMod__BARNACLES_CAN_SWALLOW_PLAYERS //Allow players to be swallowed by barnacles *schlurrrp*.
 #define SecobMod__FIRST_PERSON_RAGDOLL_CAMERA_ON_PLAYER_DEATH //No thirdperson ragdoll view on being killed.
-#define SecobMod__PLAYER_MOVEMENT_CAMERA_BOB //Add camera bob to a moving player.
+//#define SecobMod__PLAYER_MOVEMENT_CAMERA_BOB //Add camera bob to a moving player.
 
 /************************/
 /* Player Enhancements. */
@@ -52,19 +52,19 @@
 #define SecobMod__ENABLE_NIGHTVISION_FOR_HEAVY_CLASS //Give the heavy class nightvision (use the 'N' key to toggle on/off)
 #define SecobMod__PLAYERS_CAN_PICKUP_OBJECTS //Players can pickup objects with their hands.
 #define SecobMod__CAN_SPRINT_WITHOUT_SUIT //Players can sprint without the HEV suit.
-#define SecobMod__HAS_AMMO_REGARDLESS_OF_SUIT //Players have an ammo count.
-#define SecobMod__HAS_BATTERY_REGARDLESS_OF_SUIT //Players have battery charge.
-#define SecobMod__HAS_DAMAGE_INDICATOR_REGARDLESS_OF_SUIT //Players see damage indication.
+//#define SecobMod__HAS_AMMO_REGARDLESS_OF_SUIT //Players have an ammo count.
+//#define SecobMod__HAS_BATTERY_REGARDLESS_OF_SUIT //Players have battery charge.
+//#define SecobMod__HAS_DAMAGE_INDICATOR_REGARDLESS_OF_SUIT //Players see damage indication.
 #define SecobMod__HAS_HEALTH_REGARDLESS_OF_SUIT //Players have health hud.
-#define SecobMod__HAS_HUD_LOCATOR_REGARDLESS_OF_SUIT //Players can see the location of the ep2 jalopy.
-#define SecobMod__HAS_NEUROTOXIN_INDICATOR_REGARDLESS_OF_SUIT //Players are cured against poison.
-#define SecobMod__HAS_ZOOM_VIEW_FUNCTION_REGARDLESS_OF_SUIT //Players can zoon.
-#define SecobMod__HAS_POSTURE_INDICATOR_REGARDLESS_OF_SUIT //No idea but we added it anyway.
-#define SecobMod__HAS_SQUAD_INDICATOR_REGARDLESS_OF_SUIT //Shows if you have squad AI following or not.
+//#define SecobMod__HAS_HUD_LOCATOR_REGARDLESS_OF_SUIT //Players can see the location of the ep2 jalopy.
+//#define SecobMod__HAS_NEUROTOXIN_INDICATOR_REGARDLESS_OF_SUIT //Players are cured against poison.
+//#define SecobMod__HAS_ZOOM_VIEW_FUNCTION_REGARDLESS_OF_SUIT //Players can zoom.
+//#define SecobMod__HAS_POSTURE_INDICATOR_REGARDLESS_OF_SUIT //No idea but we added it anyway.
+//#define SecobMod__HAS_SQUAD_INDICATOR_REGARDLESS_OF_SUIT //Shows if you have squad AI following or not.
 #define SecobMod__HAS_WEAPONS_SELECTION_REGARDLESS_OF_SUIT //Allows usage of weapons.
 #define SecobMod__HAS_POWER_INDICATOR_REGARDLESS_OF_SUIT //Shows sprint etc meter
 #define SecobMod__HAS_FLASHLIGHT_REGARDLESS_OF_SUIT //Enables the flashlight except HL2 DM overrides disabling this and provides the flashlight anyway.
-#define SecobMod__HAS_GEIGER_COUNTER_REGARDLESS_OF_SUIT //Allows you to detect toxic areas.
+//#define SecobMod__HAS_GEIGER_COUNTER_REGARDLESS_OF_SUIT //Allows you to detect toxic areas.
 //#define SecobMod__HAS_L4D_STYLE_GLOW_EFFECTS //The glowing outline that you see used in L4D (Left4Dead).
 //#define GLOWS_ENABLE //Use this to enable Valve's glow code for use with the above (both defines are required).
 
@@ -82,7 +82,7 @@
 #define SecobMod__ALLOW_VALVE_APPROVED_CHEATING //Allow sv_cheats to work.
 #define SecobMod__MULTIPLAYER_CHAT_BUBBLES //Shows a chat icon while a player is typing.
 #define SecobMod__HIGH_PING_VEHICLE_FIX //Remove vehicle judder for players with high latency (lag) at the cost of forward/backwards view dampening.
-//#define SecobMod__ALLOW_JEEP_HEADLIGHTS //Allows headlights to work in jeep/jalopy.
+#define SecobMod__ALLOW_JEEP_HEADLIGHTS //Allows headlights to work in jeep/jalopy.
 
 /******************************/
 /* Experimental Enhancements. */

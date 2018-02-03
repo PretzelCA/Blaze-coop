@@ -1,0 +1,16 @@
+// Choreo version 1
+actor "Animal"
+{
+  channel "Animations"
+  {
+    event flexanimation "pissed"
+    {
+      time 1.098039 1.598039
+      param ""
+      flexanimations samples_use_time
+      {
+      }
+    }
+  }
+}
+

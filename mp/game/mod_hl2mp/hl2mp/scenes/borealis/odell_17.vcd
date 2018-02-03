@@ -1,0 +1,107 @@
+// Choreo version 1
+actor "odell"
+{
+  channel "look at"
+  {
+    event lookat "Player"
+    {
+      time 0.046666 6.239999
+      param "Player"
+      event_ramp
+      {
+        0.9290 0.8700
+        2.4154 0.8700
+        3.9018 0.8700
+      }
+    }
+  }
+  channel "audio"
+  {
+    event speak "warmer"
+    {
+      time 0.246666 6.260634
+      param "Borealis.Odell_17"
+      fixedlength
+      cctype "cc_master"
+      cctoken ""
+    }
+  }
+  channel "gesture"
+  {
+    event gesture "g_palm_up_l"
+    {
+      time 2.733334 4.700000
+      param "g_palm_up_l"
+      absolutetags playback_time
+      {
+        "apex" 0.172414
+        "accent" 0.362069
+        "loop" 0.431034
+        "end" 0.775862
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.172414
+        "accent" 0.362069
+        "loop" 0.431034
+        "end" 0.775862
+      }
+      sequenceduration 1.966667
+    }
+  }
+  channel "gesture2"
+  {
+    event gesture "g_openarms_right"
+    {
+      time 1.846666 4.213333
+      param "g_openarms_right"
+      absolutetags playback_time
+      {
+        "apex" 0.142857
+        "accent" 0.300000
+        "loop" 0.714286
+        "end" 0.742857
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.142857
+        "accent" 0.300000
+        "loop" 0.714286
+        "end" 0.742857
+      }
+      sequenceduration 2.366667
+    }
+    event gesture "b_OverHere_Right"
+    {
+      time 4.833333 6.633334
+      param "b_OverHere_Right"
+      absolutetags playback_time
+      {
+        "apex" 0.188679
+        "extreme" 0.792453
+        "loop" 0.811321
+        "end" 0.830189
+      }
+      absolutetags shifted_time
+      {
+        "apex" 0.188679
+        "extreme" 0.792453
+        "loop" 0.811321
+        "end" 0.830189
+      }
+      sequenceduration 1.800000
+    }
+  }
+}
+
+scalesettings
+{
+  "CChoreoView" "100"
+  "SceneRampTool" "100"
+  "ExpressionTool" "100"
+  "GestureTool" "100"
+  "RampTool" "100"
+}
+fps 60
+snap off
+ignorePhonemes off
