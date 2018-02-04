@@ -11,6 +11,6 @@ exec autoexec.cfg
 //
 stuffcmds
 
-hostname "Source Engine Co-Operative Base Modification."
+hostname "Blaze Co-op 1.0"
 
 mp_forcerespawn 0

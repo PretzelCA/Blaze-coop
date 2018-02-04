@@ -70,9 +70,7 @@
             		game                		|all_source_engine_paths|hl2/hl2_sound_vo_english.vpk
             		game                		|all_source_engine_paths|hl2/hl2_sound_misc.vpk
             		game                		|all_source_engine_paths|hl2/hl2_misc.vpk
-			game				|gameinfo_path|.
-			game				hl2mp
-			game				hl2
+
 			game				|gameinfo_path|hl2mp
 			platform			|all_source_engine_paths|platform/platform_misc.vpk
 
@@ -84,6 +82,8 @@
 			gamebin				hl2mp/bin
 
 			// Last, mount in shared HL2 loose files
+			game				|all_source_engine_paths|ep2
+			game				|all_source_engine_paths|episodic
 			game				|all_source_engine_paths|hl2mp
 			game				|all_source_engine_paths|hl2
 			platform			|all_source_engine_paths|platform
