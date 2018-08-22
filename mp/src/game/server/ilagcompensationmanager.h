@@ -27,6 +27,7 @@ public:
 	#ifdef SecobMod__Enable_Fixed_Multiplayer_AI
 		virtual void	RemoveNpcData(int index) = 0; 
 	#endif //SecobMod__Enable_Fixed_Multiplayer_AI
+	virtual bool	IsCurrentlyDoingLagCompensation() const = 0;
 };
 
 extern ILagCompensationManager *lagcompensation;

@@ -221,6 +221,7 @@ public:
 #ifdef SecobMod__Enable_Fixed_Multiplayer_AI
 	m_bNeedsAIUpdate = true; 
 #endif //SecobMod__Enable_Fixed_Multiplayer_AI
+		m_isCurrentlyDoingCompensation = false;
 	}
 
 	// IServerSystem stuff
@@ -250,6 +251,8 @@ public:
 	} 
 #endif //SecobMod__Enable_Fixed_Multiplayer_AI
 
+
+	bool			IsCurrentlyDoingLagCompensation() const OVERRIDE { return m_isCurrentlyDoingCompensation; }
 
 private:
 	void			BacktrackPlayer( CBasePlayer *player, float flTargetTime );
@@ -302,6 +305,8 @@ void UpdateAIIndexes();
 	bool					m_bNeedsAIUpdate; 
 #endif //SecobMod__Enable_Fixed_Multiplayer_AI
 
+
+	bool					m_isCurrentlyDoingCompensation;	// Sentinel to prevent calling StartLagCompensation a second time before a Finish.
 };
 
 static CLagCompensationManager g_LagCompensationManager( "CLagCompensationManager" );
@@ -533,6 +538,8 @@ void CLagCompensationManager::UpdateAIIndexes()
 // Called during player movement to set up/restore after lag compensation
 void CLagCompensationManager::StartLagCompensation( CBasePlayer *player, CUserCmd *cmd )
 {
+	Assert( !m_isCurrentlyDoingCompensation );
+
 	//DONT LAG COMP AGAIN THIS FRAME IF THERES ALREADY ONE IN PROGRESS
 	//IF YOU'RE HITTING THIS THEN IT MEANS THERES A CODE BUG
 	if ( m_pCurrentPlayer )
@@ -578,6 +585,8 @@ void CLagCompensationManager::StartLagCompensation( CBasePlayer *player, CUserCm
 	Q_memset( m_EntityRestoreData, 0, sizeof( m_EntityRestoreData ) ); 
 	Q_memset( m_EntityChangeData, 0, sizeof( m_EntityChangeData ) ); 
 #endif //SecobMod__Enable_Fixed_Multiplayer_AI
+
+	m_isCurrentlyDoingCompensation = true;
 
 	// Get true latency
 
@@ -1361,7 +1370,10 @@ void CLagCompensationManager::FinishLagCompensation( CBasePlayer *player )
 	m_pCurrentPlayer = NULL;
 
 	if ( !m_bNeedToRestore )
+	{
+		m_isCurrentlyDoingCompensation = false;
 		return; // no player was changed at all
+	}
 
 	// Iterate all active players
 	for ( int i = 1; i <= gpGlobals->maxClients; i++ )
@@ -1541,6 +1553,8 @@ void CLagCompensationManager::FinishLagCompensation( CBasePlayer *player )
 #endif //SecobMod__Enable_Fixed_Multiplayer_AI
 		}
 	}
+
+	m_isCurrentlyDoingCompensation = false;
 }
 
 
